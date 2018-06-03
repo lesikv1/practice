@@ -1,7 +1,7 @@
 /*
 * Author: Onufriev Alexey
 * varik 8
-* task 2
+* task 3
 * Created on 3 june 2018 y., 14:41
 */
 
