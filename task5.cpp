@@ -56,9 +56,39 @@ void search_Start_F () {
   file.close();
 }
 
+void search_Start_Bukvu () {
+  ifstream file("file.txt");
+  char buff[50];
+  while(!file.eof()){
+    file.getline(buff, 500);
+    if(buff[0] == buff[2] || buff[0] == buff[3] || buff[0] == buff[4]) {
+      cout << buff << endl;
+    }
+  }
+  file.close();
+}
+
+void search_Three_E () {
+  ifstream file("file.txt");
+  char buff[50];
+  while(!file.eof()){
+    file.getline(buff, 500);
+    int e = 0;
+    for(int i = 0; i < 6; i++) {
+      if(buff[i] == 'e') {
+        e += 1;
+      }
+    }
+    if(e == 3) {
+      cout << buff << endl;
+    }
+  }
+  file.close();
+}
+
 
 int main() {
-  writeInFile();
+  // writeInFile();
   cout << "=================" << endl;
   cout << "read all text" << endl;
   cout << "=================" << endl;
@@ -71,4 +101,12 @@ int main() {
   cout << "read words start f" << endl;
   cout << "=================" << endl;
   search_Start_F();
+  cout << "=================" << endl;
+  cout << "read words start and end one bukva" << endl;
+  cout << "=================" << endl;
+  search_Start_Bukvu();
+  cout << "=================" << endl;
+  cout << "read words three e bukvi" << endl;
+  cout << "=================" << endl;
+  search_Three_E();
 }
